@@ -4009,6 +4009,50 @@ input[type="button"].btn-block {
   text-align: center;
 }
 
+.product-single:hover .product-view{
+  display: block;
+  -webkit-animation: fadeInUp 400ms;
+  animation: fadeInUp 400ms;
+}
+
+.product-view{
+  display: none;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: rgba(51, 33, 29, 0.7);
+  width: 92%;
+  text-align: center;  
+}
+
+.product-view .nav-pills {
+  padding: 0;
+  display: inline-block;
+  margin-top: -26px;
+  top: 50%;
+  position: relative;
+}
+
+.product-view .nav-pills li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.product-view .nav-pills li a {
+  color: white !important;
+  -webkit-animation: scaleIn 400ms linear 100ms both;
+  animation: scaleIn 400ms linear 100ms both;
+  -webkit-transition: all 0.9s ease;
+  transition: all 0.9s ease;
+}
+
+.product-view .nav-pills li a:hover {
+  color: #DA9F5B !important;
+  text-decoration: none;
+  -webkit-transition: all 0.9s ease;
+  transition: all 0.9s ease;
+}
+
 .tab-content > .tab-pane {
   display: none;
 }
