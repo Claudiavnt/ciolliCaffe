@@ -469,6 +469,18 @@ h6, .h6 {
   }
 }
 
+.display-5 {
+  font-size: 1.5rem;
+  font-weight: 100;
+  line-height: 1.2;
+}
+
+@media (max-width: 1200px) {
+  .display-5 {
+    font-size: calc(0.475rem + 2.7vw) ;
+  }
+}
+
 hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -3955,6 +3967,10 @@ input[type="button"].btn-block {
 
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
   border-color: #e9ecef #e9ecef #dee2e6;
+}
+
+.nav-link.dropdown-toggle:focus-visible {
+  outline: transparent !important;
 }
 
 .nav-tabs .nav-link.disabled {
