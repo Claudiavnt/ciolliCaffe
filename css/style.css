@@ -9748,6 +9748,20 @@ h6,
   background-size: cover;
 }
 
+.lollo-header {
+  background: linear-gradient(rgba(51, 33, 29, 0.9), rgba(51, 33, 29, 0.9)), url(../img/lollo/bg-miscele.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.toraldo-header {
+  background: linear-gradient(rgba(51, 33, 29, 0.9), rgba(51, 33, 29, 0.9)), url(../img/toraldo/bg-miscele.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 
 
