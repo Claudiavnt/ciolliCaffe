@@ -9762,6 +9762,19 @@ h6,
   background-size: cover;
 }
 
+.illy-header {
+  background: linear-gradient(rgba(51, 33, 29, 0.9), rgba(51, 33, 29, 0.9)), url(../img/illy/bg-miscele.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rekico-header {
+  background: linear-gradient(rgba(51, 33, 29, 0.9), rgba(51, 33, 29, 0.9)), url(../img/rekico/bg-miscele.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
 
