@@ -9776,6 +9776,12 @@ h6,
   background-size: cover;
 }
 
+.mokador-header {
+  background: linear-gradient(rgba(51, 33, 29, 0.9), rgba(51, 33, 29, 0.9)), url(../img/mokador/bg-miscele.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
 .product-filters {
