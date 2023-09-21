@@ -9997,3 +9997,14 @@ ul.product-share {
   margin-top: 25px;
   margin-bottom: 25px;
 }
+
+.product-text ul{
+  list-style:none;
+}
+
+.product-text ul li{
+  width:40px;
+  height:40px;
+  display:inline-block;
+
+}
