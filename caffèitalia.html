@@ -73,7 +73,7 @@
         <div class="container">
             <div class="section-title">
                 <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">
-                    <a href="sistemi chiusi.html" style="text-decoration: none;">Sistemi Chiusi</a>
+                    <a id="dynamicContent" href="sistemi chiusi.html" style="text-decoration: none;"></a>
                 </h4>
                 <h1 class="display-4">Caffè d'Italia</h1>
             </div>
@@ -321,6 +321,25 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        // Ottieni il parametro "from" dalla URL per determinare la pagina che richiede il cambio dinamico
+        const urlParams = new URLSearchParams(window.location.search);
+        const fromPage = urlParams.get('from');
+
+        const dynamicContent = document.getElementById('dynamicContent');
+
+        // Se il parametro "from" è "sistemichiusi", cambia il contenuto in "Sitemi chiusi"
+        if (fromPage === 'sistemichiusi') {
+          dynamicContent.innerHTML = 'Sitemi chiusi';
+          dynamicContent.href = 'sistemi chiusi.html'
+        }
+        // Se il parametro "from" è "macchine", cambia il contenuto in "macchine"
+        else if (fromPage === 'macchine') {
+            dynamicContent.innerHTML = 'Macchine';
+            dynamicContent.href = 'macchine.html'
+        }
+      </script>
 </body>
 
 </html>
