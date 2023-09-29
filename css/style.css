@@ -9822,6 +9822,20 @@ h6,
 }
 
 
+.moka-header {
+  background: linear-gradient(rgba(51, 33, 29, 0.9), rgba(51, 33, 29, 0.9)), url(../img/moka/bg-miscele.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sistemichiusi-header {
+  background: linear-gradient(rgba(51, 33, 29, 0.9), rgba(51, 33, 29, 0.9)), url(../img/sistemichiusi/bg-miscele.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 .product-filters {
   margin-bottom: 80px; }
