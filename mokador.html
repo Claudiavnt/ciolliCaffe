@@ -73,7 +73,7 @@
         <div class="container">
             <div class="section-title">
                 <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">
-                    <a href="sistemi_chiusi.html" style="text-decoration: none;">Sistemi Chiusi</a>
+                    <a id="dynamicContent" href="sistemi_chiusi.html" style="text-decoration: none;"></a>
                 </h4>
                 <h1 class="display-4">Mokador</h1>
             </div>
@@ -201,7 +201,7 @@
                 <p><i class="fa fa-phone-alt mr-2"></i>Info 348 231 7351</p>
                 <p><i class="fa fa-phone-alt mr-2"></i>Consegne 3356662404</p>
                 <p><i class="fa fa-phone-alt mr-2"></i>Assistenza 3471973645</p>
-                <p class="m-0"><i class="fa fa-envelope mr-2"></i>ciollicaffe@gmail.com</p>
+                <p class="m-0"><i class="fa fa-envelope mr-2"></i><a href="mailto:ciollicaffe@gmail.com">ciollicaffe@gmail.com</a></p>
             </div>
             <div class="col-lg-4 col-md-6 mb-5">
                 <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Seguici</h4>
@@ -222,7 +222,7 @@
         </div>
         <div class="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
             <p class="mb-2 text-white">Ciolli Caffè. Diritti riservati</a></p>
-            <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://htmlcodex.com">Ilenia Ventura</a></p>
+            <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://www.behance.net/ileniaventura">Ilenia Ventura</a></p>
         </div>
     </div>
     <!-- Footer End -->
@@ -248,6 +248,26 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+
+    <script>
+        // Ottieni il parametro "from" dalla URL per determinare la pagina che richiede il cambio dinamico
+        const urlParams = new URLSearchParams(window.location.search);
+        const fromPage = urlParams.get('from');
+
+        const dynamicContent = document.getElementById('dynamicContent');
+
+        // Se il parametro "from" è "sistemichiusi", cambia il contenuto in "Sitemi chiusi"
+        if (fromPage === 'sistemichiusi') {
+          dynamicContent.innerHTML = 'Sitemi chiusi';
+          dynamicContent.href = 'sistemi_chiusi.html'
+        }
+        // Se il parametro "from" è "macchine", cambia il contenuto in "macchine"
+        else if (fromPage === 'macchine') {
+            dynamicContent.innerHTML = 'Macchine';
+            dynamicContent.href = 'macchine.html'
+        }
+      </script>
 </body>
 
 </html>

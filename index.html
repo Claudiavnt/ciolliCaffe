@@ -267,60 +267,54 @@
     <!-- Prodotti End -->
 
 
-    <!-- Reservation Start -->
-    <!--div class="container-fluid my-5">
-        <div class="container">
-            <div class="reservation position-relative overlay-top overlay-bottom">
+    <!-- Recensioni Start -->
+    <div id='recensioni' class="reservation position-relative overlay-top overlay-bottom">
+        <div class="container-fluid my-5">
+            <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 my-5 my-lg-0">
                         <div class="p-5">
                             <div class="mb-4">
-                                <h1 class="display-3 text-primary">30% OFF</h1>
-                                <h1 class="text-white">For Online Reservation</h1>
+                                <h1 class="display-3 text-primary">Lascia la tua recensione</h1>
                             </div>
-                            <p class="text-white">Lorem justo clita erat lorem labore ea, justo dolor lorem ipsum ut sed eos,
-                                ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea</p>
+                            <p class="text-white">Se hai acquistato un nostro prodotto o usufruito di un nostro servizio, saremo felici di sapere il tuo pensiero in merito.
+                                La tua opinione per noi è importante!
+                            </p>
                             <ul class="list-inline text-white m-0">
-                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Lorem ipsum dolor sit amet</li>
-                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Lorem ipsum dolor sit amet</li>
-                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Lorem ipsum dolor sit amet</li>
+                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Facci sapere com'è stata l'esperienza nel nostro punto vendita</li>
+                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Valuta l'affidabilità dei nostri servizi</li>
+                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Esprimi la tua opinione sulla qualità dei nostri prodotti</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="text-center p-5" style="background: rgba(51, 33, 29, .8);">
-                            <h1 class="text-white mb-4 mt-5">Book Your Table</h1>
-                            <form class="mb-5">
+                            <h1 class="text-white mb-4 mt-5"></h1>
+                            <form action="https://formspree.io/f/moqopjvp" method="POST" class="mb-5">
                                 <div class="form-group">
-                                    <input type="text" class="form-control bg-transparent border-primary p-4" placeholder="Name"
+                                    <input type="text" name="nomeCliente" class="form-control border-primary p-4" placeholder="Nome e Cognome"
                                         required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control bg-transparent border-primary p-4" placeholder="Email"
+                                    <input type="text" name="prodotto" class="form-control border-primary p-4" placeholder="Prodotto Acquistato"
                                         required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <div class="date" id="date" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent border-primary p-4 datetimepicker-input" placeholder="Date" data-target="#date" data-toggle="datetimepicker"/>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="time" id="time" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent border-primary p-4 datetimepicker-input" placeholder="Time" data-target="#time" data-toggle="datetimepicker"/>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <select class="custom-select bg-transparent border-primary px-4" style="height: 49px;">
-                                        <option selected>Person</option>
-                                        <option value="1">Person 1</option>
-                                        <option value="2">Person 2</option>
-                                        <option value="3">Person 3</option>
-                                        <option value="3">Person 4</option>
+                                    <select name="valutazione" class="custom-select border-primary px-4" style="height: 49px;">
+                                        <option selected>Valutazione</option>
+                                        <option value="1">1 Stella</option>
+                                        <option value="2">2 Stelle</option>
+                                        <option value="3">3 Stelle</option>
+                                        <option value="4">4 Stelle</option>
+                                        <option value="5">5 Stelle</option>
                                     </select>
                                 </div>
-
+                                <div class="form-group">
+                                    <textarea type="text" name="messaggio" class="form-control border-primary p-4" placeholder="Scrivi la tua recensione"
+                                        required="required"></textarea>
+                                </div>
                                 <div>
-                                    <button class="btn btn-primary btn-block font-weight-bold py-3" type="submit">Book Now</button>
+                                    <button class="btn btn-primary btn-block font-weight-bold py-3" type="submit">Invia</button>
                                 </div>
                             </form>
                         </div>
@@ -328,24 +322,31 @@
                 </div>
             </div>
         </div>
-    </div-->
-    <!-- Reservation End -->
+    </div>
+    <!-- Recensioni End -->
 
 
     <!-- Testimonial Start -->
-    <!--div class="container-fluid py-5">
+    <div class="container-fluid py-5">
         <div class="container">
             <div class="section-title">
-                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Testimonial</h4>
-                <h1 class="display-4">Our Clients Say</h1>
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Recensioni</h4>
+                <h1 class="display-4">Cosa dicono di noi</h1>
             </div>
             <div class="owl-carousel testimonial-carousel">
                 <div class="testimonial-item">
                     <div class="d-flex align-items-center mb-3">
                         <img class="img-fluid" src="img/testimonial-1.jpg" alt="">
                         <div class="ml-3">
-                            <h4>Client Name</h4>
-                            <i>Profession</i>
+                            <h4>Chiara</h4>
+                            <i>Capsule compatibili Nespresso</i>
+                            <p class="m-0">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                            </p>
                         </div>
                     </div>
                     <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
@@ -354,8 +355,15 @@
                     <div class="d-flex align-items-center mb-3">
                         <img class="img-fluid" src="img/testimonial-2.jpg" alt="">
                         <div class="ml-3">
-                            <h4>Client Name</h4>
-                            <i>Profession</i>
+                            <h4>Giovanni</h4>
+                            <i>Macchina Perla</i>
+                            <p class="m-0">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                            </p>
                         </div>
                     </div>
                     <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
@@ -364,8 +372,15 @@
                     <div class="d-flex align-items-center mb-3">
                         <img class="img-fluid" src="img/testimonial-3.jpg" alt="">
                         <div class="ml-3">
-                            <h4>Client Name</h4>
-                            <i>Profession</i>
+                            <h4>Angela</h4>
+                            <i>Mischele Ciolli Caffè</i>
+                            <p class="m-0">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                            </p>
                         </div>
                     </div>
                     <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
@@ -374,15 +389,22 @@
                     <div class="d-flex align-items-center mb-3">
                         <img class="img-fluid" src="img/testimonial-4.jpg" alt="">
                         <div class="ml-3">
-                            <h4>Client Name</h4>
-                            <i>Profession</i>
+                            <h4>Stefano</h4>
+                            <i>Macchina Lollina</i>
+                            <p class="m-0">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                            </p>
                         </div>
                     </div>
                     <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
                 </div>
             </div>
         </div>
-    </div-->
+    </div>
     <!-- Testimonial End -->
 
 
@@ -395,7 +417,7 @@
                 <p><i class="fa fa-phone-alt mr-2"></i>Info 348 231 7351</p>
                 <p><i class="fa fa-phone-alt mr-2"></i>Consegne 3356662404</p>
                 <p><i class="fa fa-phone-alt mr-2"></i>Assistenza 3471973645</p>
-                <p class="m-0"><i class="fa fa-envelope mr-2"></i>ciollicaffe@gmail.com</p>
+                <p class="m-0"><i class="fa fa-envelope mr-2"></i><a href="mailto:ciollicaffe@gmail.com">ciollicaffe@gmail.com</a></p>
             </div>
             <div class="col-lg-4 col-md-6 mb-5">
                 <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Seguici</h4>
@@ -416,7 +438,7 @@
         </div>
         <div class="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
             <p class="mb-2 text-white">Ciolli Caffè. Diritti riservati</a></p>
-            <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://htmlcodex.com">Ilenia Ventura</a></p>
+            <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://www.behance.net/ileniaventura">Ilenia Ventura</a></p>
         </div>
     </div>
     <!-- Footer End -->
