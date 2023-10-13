@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>Ciolli caffè</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free Website Template" name="keywords">
-    <meta content="Free Website Template" name="description">
+    <meta content="Ciolli Caffè dal 2001" name="keywords">
+    <meta content="Ciolli Caffè dal 2001" name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -45,7 +45,7 @@
                         <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Prodotti</a>
                         <div class="dropdown-menu text-capitalize">
                             <a href="capsule.html" class="dropdown-item">Capsule</a>
-                            <a href="cialde.html" class="dropdown-item">Cialde</a>
+                            <a href="cialde.html?from=prodotti" class="dropdown-item">Cialde</a>
                             <a href="macchine.html" class="dropdown-item">Macchine</a>
                             <a href="sistemi_chiusi.html" class="dropdown-item">Sistemi Chiusi</a>
                             <a href="brand.html" class="dropdown-item">Brand Partner</a>
@@ -73,7 +73,7 @@
         <div class="container">
             <div class="section-title">
                 <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">
-                    <a href="index.html#prodotti" style="text-decoration: none;">Prodotti</a>
+                    <a id="dynamicContent" href="index.html#prodotti" style="text-decoration: none;"></a>
                 </h4>
                 <h1 class="display-4">Cialde ese44</h1>
             </div>
@@ -265,7 +265,7 @@
 
             <div class="section-title">
                 <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">
-                    <a href="index.html" style="text-decoration: none;">Prodotti</a>
+                    <a id="dynamicContent2" href="index.html#prodotti" style="text-decoration: none;"></a>
                 </h4>
                 <h1 class="display-4">Cialde xp38</h1>
             </div>
@@ -493,6 +493,30 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        // Ottieni il parametro "from" dalla URL per determinare la pagina che richiede il cambio dinamico
+        const urlParams = new URLSearchParams(window.location.search);
+        const fromPage = urlParams.get('from');
+
+        const dynamicContent = document.getElementById('dynamicContent');
+        const dynamicContent2 = document.getElementById('dynamicContent2');
+
+        // Se il parametro "from" è "sistemichiusi", cambia il contenuto in "Sitemi chiusi"
+        if (fromPage === 'prodotti') {
+          dynamicContent.innerHTML = 'Prodotti';
+          dynamicContent.href = 'index.html#prodotti'
+          dynamicContent2.innerHTML = 'Prodotti';
+          dynamicContent2.href = 'index.html#prodotti'
+        }
+        // Se il parametro "from" è "macchine", cambia il contenuto in "macchine"
+        else if (fromPage === 'macchine') {
+            dynamicContent.innerHTML = 'Macchine';
+            dynamicContent.href = 'macchine.html'
+            dynamicContent2.innerHTML = 'Macchine';
+            dynamicContent2.href = 'macchine.html'
+        }
+      </script>
 </body>
 
 </html>
