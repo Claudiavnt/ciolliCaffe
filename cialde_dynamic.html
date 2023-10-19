@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ciolli caffè</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Ciolli Caffè dal 2001" name="keywords">
+    <meta content="Ciolli Caffè dal 2001" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 nav-bar" id="navbar"></div>
+    <script src="js/navbar/navbar.js"></script>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid cialde-header mb-5 position-relative overlay-bottom">
+        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Reservation Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <!--Cialde ese44 start-->
+            <div class="section-title">
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">
+                    <a id="dynamicContent" href="index.html#prodotti" style="text-decoration: none;"></a>
+                </h4>
+                <h1 class="display-4">Cialde ese44</h1>
+            </div>
+            <div class="position-relative overlay-top overlay-bottom">
+                <div class="row align-items-center" id="product-container-ese44"></div>
+                <script src="js/cialde/cialde-ese44.js"></script>
+            </div>
+            <!--Cialde ese44 end-->
+
+            <!--Cialde xp38 start-->
+            <div class="section-title">
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">
+                    <a id="dynamicContent2" href="index.html#prodotti" style="text-decoration: none;"></a>
+                </h4>
+                <h1 class="display-4">Cialde xp38</h1>
+            </div>
+            <div class="position-relative overlay-top overlay-bottom">
+                <div class="row align-items-center" id="product-container-xp38"></div>
+                <script src="js/cialde/cialde-xp38.js"></script>
+            </div>
+            <!--Cialde xp38 end-->
+
+            <!--Infusi start-->
+            <div class="section-title">
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">
+                    <a id="dynamicContent3" href="index.html#prodotti" style="text-decoration: none;"></a>
+                </h4>
+                <h1 class="display-4">Infusi ese44 | xp38</h1>
+            </div>
+            <div class="position-relative overlay-top overlay-bottom">
+                <div class="row align-items-center" id="product-container-infusi"></div>
+                <script src="js/cialde/cialde-infusi.js"></script>
+            </div>
+            <!--Infusi end-->
+        </div>
+    </div>
+    <!-- Reservation End -->
+
+
+    <!-- Footer Start -->
+    <div id='contatti' class="container-fluid footer text-white mt-5 pt-5 px-0 position-relative overlay-top">
+        <script src="js/footer/footer.js"></script>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+        // Ottieni il parametro "from" dalla URL per determinare la pagina che richiede il cambio dinamico
+        const urlParams = new URLSearchParams(window.location.search);
+        const fromPage = urlParams.get('from');
+
+        const dynamicContent = document.getElementById('dynamicContent');
+        const dynamicContent2 = document.getElementById('dynamicContent2');
+        const dynamicContent3 = document.getElementById('dynamicContent3');
+
+        // Se il parametro "from" è "sistemichiusi", cambia il contenuto in "Sistemi Chiusi"
+        if (fromPage === 'prodotti') {
+          dynamicContent.innerHTML = 'Prodotti';
+          dynamicContent.href = 'index.html#prodotti'
+          dynamicContent2.innerHTML = 'Prodotti';
+          dynamicContent2.href = 'index.html#prodotti'
+          dynamicContent3.innerHTML = 'Prodotti';
+          dynamicContent3.href = 'index.html#prodotti'
+        }
+        // Se il parametro "from" è "macchine", cambia il contenuto in "macchine"
+        else if (fromPage === 'macchine') {
+            dynamicContent.innerHTML = 'Macchine';
+            dynamicContent.href = 'macchine.html'
+            dynamicContent2.innerHTML = 'Macchine';
+            dynamicContent2.href = 'macchine.html'
+            dynamicContent3.innerHTML = 'Macchine';
+            dynamicContent3.href = 'macchine.html'
+        }
+    </script>
+</body>
+
+</html>
